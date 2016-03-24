@@ -1,0 +1,5 @@
+# What was your name?
+
+Secure, real-time mesh-network facial recognition for Android.
+
+This was a project I worked on at UCLA. It was built for Android phones, but was imagined for something like a Google Glass interface (this was developed before Google Glass became widely available). If you opened up the app and pointed the camera at someone else who also had the app, it would display their name by their face. However, it didn't do this by keeping everyone's photos on some server somewhere. Instead, everyone's copy of the app kept a photo of themselves. When the app detected someone else face in the camera, it would query all the phones around it using WiFi direct, sending them the bits of the detected face. Each phone would compare it against the phone owners pictures, and if the face was their's, would send back their name. This way, you could do face rec without sharing any private data, either with the person or with a 3rd party company. We used a native C++ implementation of OpenCV with an Android bridge to make this work on Android.
